@@ -8,7 +8,7 @@ import GradientBackground from "@/components/ui/background";
 import { Form } from "@/components/ui/form";
 import FormField from "@/components/FormField";
 import { Button } from "@/components/ui/button";
-
+import Image from "next/image";
 const formSchema = z.object({
   name: z.string().optional(),
   email: z.string().email(),
@@ -46,8 +46,6 @@ const Login = ({ isSignIn = true }: { isSignIn?: boolean }) => {
             Missed us? We've got fresh kicks waiting for you !!
           </h3>
 
-          
-
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
@@ -79,17 +77,35 @@ const Login = ({ isSignIn = true }: { isSignIn?: boolean }) => {
                 type="password"
               />
               <h4 className="text-sm text-blue-300 text-right">
-            <Link href="/passRecovrery">Forgot password</Link>
-          </h4>
+                <Link href="/passRecovrery">Forgot password</Link>
+              </h4>
+              <div className="flex justify-between items-center gap-4 w-full">
+                <Button className="flex-1 bg-black text-white h-10 flex items-center justify-center gap-2">
+                  <Image
+                    src="/google-icon-logo-svgrepo-com.svg"
+                    width={20}
+                    height={20}
+                    alt="google"
+                  />
+                  Google
+                </Button>
+                <Button className="flex-1 bg-black text-white h-10 flex items-center justify-center gap-2">
+                  <Image
+                    src="/google-icon-logo-svgrepo-com.svg"
+                    width={20}
+                    height={20}
+                    alt="google"
+                  />
+                  Google
+                </Button>
+              </div>
 
               <Button className="btn w-full bg-purple-600" type="submit">
                 {isSignIn ? "Sign In" : "Create an Account"}
               </Button>
             </form>
           </Form>
-              <Button>
-                Google
-              </Button>
+              
           <p className="text-center text-white">
             {isSignIn ? "No account yet?" : "Have an account already?"}
             <Link
