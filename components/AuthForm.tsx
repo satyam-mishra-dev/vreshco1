@@ -59,7 +59,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="w-full space-y-6 mt-4 form"
+              className="w-full space-y-2 mt-2 form"
             >
               {!isSignIn && (
                 <FormField
@@ -95,6 +95,16 @@ const AuthForm = ({ type }: { type: FormType }) => {
                 placeholder="Enter your password"
                 type="password"
               />
+              {!isSignIn && (
+                <FormField
+                  control={form.control}
+                  name="password"
+                  label="Confirm Password"
+                  placeholder="Confirm Password"
+                  type="text"
+                />
+              )}
+
               <h4 className="text-sm text-blue-300 text-right">
                 <Link href="/passRecovrery">Forgot password</Link>
               </h4>
