@@ -33,10 +33,10 @@ const Login = ({ isSignIn = true }: { isSignIn?: boolean }) => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-4">
+    <div className="relative min-h-screen flex items-center justify-center px-4 ">
       <GradientBackground />
 
-      <div className="card-border lg:min-w-[566px] z-10">
+      <div className="card-border lg:min-w-[566px] z-10 gradient-border">
         <div className="flex flex-col gap-6 card py-14 px-10 backdrop-blur-md bg-black/60 rounded-2xl shadow-xl">
           <div className="flex flex-row gap-2 justify-center">
             <h2 className="text-primary-100 text-white text-2xl font-semibold">Log In</h2>
@@ -79,8 +79,11 @@ const Login = ({ isSignIn = true }: { isSignIn?: boolean }) => {
               <h4 className="text-sm text-blue-300 text-right">
                 <Link href="/passRecovrery">Forgot password</Link>
               </h4>
+              <h3 className="text-white text-center">
+                or continue with 
+              </h3>
               <div className="flex justify-between items-center gap-4 w-full">
-                <Button className="flex-1 bg-black text-white h-10 flex items-center justify-center gap-2">
+                <Button className="flex-1 gradient-border bg-black text-white h-10 flex items-center justify-center gap-2">
                   <Image
                     src="/google-icon-logo-svgrepo-com.svg"
                     width={20}
@@ -89,14 +92,14 @@ const Login = ({ isSignIn = true }: { isSignIn?: boolean }) => {
                   />
                   Google
                 </Button>
-                <Button className="flex-1 bg-black text-white h-10 flex items-center justify-center gap-2">
+                <Button className="flex-1 gradient-border bg-black text-white h-10 flex items-center justify-center gap-2">
                   <Image
                     src="/google-icon-logo-svgrepo-com.svg"
                     width={20}
                     height={20}
                     alt="google"
                   />
-                  Google
+                  Facebook
                 </Button>
               </div>
 

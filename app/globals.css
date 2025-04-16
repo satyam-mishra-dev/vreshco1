@@ -111,6 +111,15 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+.gradient-border {
+  border: 2px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image: 
+    linear-gradient(#1f1f1f, #1f1f1f), /* inner background (matches card bg) */
+    linear-gradient(to right, #9333ea, #6366f1); /* your gradient border */
+}
+
 
 @layer base {
   * {
